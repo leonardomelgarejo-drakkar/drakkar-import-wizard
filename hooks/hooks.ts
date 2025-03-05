@@ -1,4 +1,4 @@
-import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
+import { After, AfterAll, Before, BeforeAll, setDefaultTimeout } from "@cucumber/cucumber";
 import { Browser, BrowserContext } from "@playwright/test";
 import { fixture } from "./pageFixture";
 import { getEnv } from "../helper/env/env";
@@ -9,6 +9,8 @@ import fs = require("fs-extra");
 
 let browser: Browser;
 let context: BrowserContext;
+
+setDefaultTimeout(30 * 1000);
 
 BeforeAll(async function() {
   getEnv();

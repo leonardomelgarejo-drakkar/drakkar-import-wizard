@@ -9,7 +9,7 @@ Este projeto contempla a automação de testes WEB do projeto Drakkar Import Wiz
 * Instalar [Node.js 22.10.0](https://nodejs.org/pt/blog/release/v22.10.0)
 * Instalar [Cucumber-JS 11.1.1](https://github.com/cucumber/cucumber-js)
 * Instalar [Playwright 1.49](https://playwright.dev/docs/intro)
-* Clone o repositório: ```git clone https://github.com/leonardomelgarejo-drakkar/azulzinha-cnj```
+* Clone o repositório: ```git clone https://github.com/leonardomelgarejo-drakkar/drakkar-import-wizard.git```
 * [Ajustes para Execução Local](#ajustes-para-execucao-local)
 
 ## Como rodar os testes
@@ -42,7 +42,7 @@ Com a inclusão do `workflow_dispatch`, é agora possível rodar o workflow remo
 3. Clique no botão **Run workflow**.
 4. No campo de entrada `tags`, insira as tags desejadas para rodar os testes, por exemplo: `@smoke-test`. Caso nada seja preenchido, todos os cenários de testes serão executados.
 5. Clique em **Run workflow** para iniciar a execução.
-6. Após a conclusão deste workflow, o workflow de pages build and deployment é automaticamente acionado, resultando na geração do relatório de testes acessível em: https://leonardomelgarejo-drakkar.github.io/azulzinha-cnj/.
+6. Após a conclusão deste workflow, o workflow de pages build and deployment é automaticamente acionado, resultando na geração do relatório de testes acessível em: https://leonardomelgarejo-drakkar.github.io/drakkar-import-wizard/.
 
 Este recurso permite que você execute os testes remotamente sem precisar modificar o código localmente, apenas configurando as tags através da interface do GitHub Actions.
 
@@ -67,9 +67,9 @@ Para visualizar o relatório HTML, basta abrir o arquivo `cucumber-report.html` 
 #### 📍 Execução Remota   
 A geração de relatórios para execuções remotas está em fase de manutenção e será integrada à pipeline CI/CD. O objetivo é disponibilizá-los via GitHub Actions.
 
-O relatório gerado pode ser acessado em [Cucumber Report HTML](https://leonardomelgarejo-drakkar.github.io/azulzinha-cnj/).  
+O relatório gerado pode ser acessado em [Cucumber Report HTML](https://leonardomelgarejo-drakkar.github.io/drakkar-import-wizard/).  
 
-O JSON do relatório pode ser acessado diretamente em: [Cucumber Report JSON](https://leonardomelgarejo-drakkar.github.io/azulzinha-cnj/report.json).  
+O JSON do relatório pode ser acessado diretamente em: [Cucumber Report JSON](https://leonardomelgarejo-drakkar.github.io/drakkar-import-wizard/report.json).  
 
 ### 🛠 Como Gerar o Relatório HTML a partir do JSON  
 Se você quiser gerar o relatório HTML localmente, siga estes passos usando o **Cucumber HTML Formatter**:  
@@ -81,7 +81,7 @@ Se você quiser gerar o relatório HTML localmente, siga estes passos usando o *
 
 2. **Baixe o JSON do relatório**:
    ```bash
-   wget -O report.json https://leonardomelgarejo-drakkar.github.io/azulzinha-cnj/report.json
+   wget -O report.json https://leonardomelgarejo-drakkar.github.io/drakkar-import-wizard/report.json
    ```
 
 3. **Gere o relatório HTML**:
