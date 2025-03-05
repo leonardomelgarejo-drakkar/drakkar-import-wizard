@@ -47,18 +47,16 @@ jobs:
       - name: Ensure test-results directory exists
         run: mkdir -p test-results
 
-      - name: Set environment variables for API tests
+      - name: Set environment variables for tests
         run: |
           echo "BASEURL=${{ secrets.BASEURL }}" >> $GITHUB_ENV
-          echo "RESOURCE_PATH_DEPOSITO_JUDICIAL=${{ secrets.RESOURCE_PATH_DEPOSITO_JUDICIAL }}" >> $GITHUB_ENV
-          echo "ENV=dev" >> $GITHUB_ENV
+          echo "ENV=test" >> $GITHUB_ENV
 
       - name: Ensure .env file is available
         run: |
           mkdir -p helper/env
           echo "BASEURL=${{ secrets.BASEURL }}" > helper/env/.env.dev
-          echo "RESOURCE_PATH_DEPOSITO_JUDICIAL=${{ secrets.RESOURCE_PATH_DEPOSITO_JUDICIAL }}" >> helper/env/.env.dev
-          echo "ENV=dev" >> helper/env/.env.dev
+          echo "ENV=test" >> helper/env/.env.dev
 
       - name: Run Cucumber tests
         run: |
@@ -69,8 +67,7 @@ jobs:
           fi
         env:
           BASEURL: ${{ secrets.BASEURL }}
-          RESOURCE_PATH_DEPOSITO_JUDICIAL: ${{ secrets.RESOURCE_PATH_DEPOSITO_JUDICIAL }}
-          ENV: dev
+          ENV: test
           npm_config_TAGS: "${{ github.event.inputs.tags }}"
         shell: bash
 
