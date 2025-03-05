@@ -1,3 +1,5 @@
+[![Drakkar Import Wizard Tests](https://github.com/leonardomelgarejo-drakkar/drakkar-import-wizard/actions/workflows/cucumber-playwright.yml/badge.svg)](https://github.com/leonardomelgarejo-drakkar/drakkar-import-wizard/actions/workflows/cucumber-playwright.yml)
+
 # Projeto de automação de testes WEB do projeto Drakkar Import Wizard
 
 ## Descrição
