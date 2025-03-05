@@ -103,7 +103,7 @@ export default class PlaywrightWrapper {
         await element.waitFor({
             state: "visible"
         });
-        return await element.textContent();
+        return (await element.textContent()).trim();
     }
 
     async waitForGridLoad(locator: string){
@@ -124,6 +124,14 @@ export default class PlaywrightWrapper {
         });
 
         return await element.innerText()
+    }
+
+    async getTextByRole(roleType: string, role: string) {
+        const element = this.page.getByRole(roleType as any, { name: role }).first();
+        await element.waitFor({
+            state: "visible"
+        });
+        return (await element.textContent()).trim();
     }
 
     async pause(){

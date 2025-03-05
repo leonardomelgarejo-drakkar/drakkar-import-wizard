@@ -10,7 +10,7 @@ import fs = require("fs-extra");
 let browser: Browser;
 let context: BrowserContext;
 
-setDefaultTimeout(30 * 1000);
+// setDefaultTimeout(30 * 1000);
 
 BeforeAll(async function() {
   getEnv();
@@ -56,8 +56,6 @@ After(async function ({ pickle }) {
     fs.readFileSync(videoPath),
     "video/webm"
   );
-  const traceFileLink = `<a href="https://trace.playwright.dev/">Open ${path}</a>`;
-  await this.attach(`Trace file: ${traceFileLink}`, 'text/html');
 });
 
 AfterAll(async function () {
