@@ -55,8 +55,8 @@ jobs:
       - name: Ensure .env file is available
         run: |
           mkdir -p helper/env
-          echo "BASEURL=${{ secrets.BASEURL }}" > helper/env/.env.dev
-          echo "ENV=test" >> helper/env/.env.dev
+          echo "BASEURL=${{ secrets.BASEURL }}" > helper/env/.env.test
+          echo "ENV=test" >> helper/env/.env.test
 
       - name: Run Cucumber tests
         run: |
