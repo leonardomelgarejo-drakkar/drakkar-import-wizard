@@ -243,7 +243,6 @@ Certifique-se de criar o arquivo .env.dev no diretório helper/env com as seguin
 
 ```bash
    mkdir -p helper/env
-   echo "BASEURL=http://example.com" > helper/env/.env.dev
-   echo "RESOURCE_PATH_DEPOSITO_JUDICIAL=/resourceExemple" >> helper/env/.env.dev
-   echo "ENV=dev" >> helper/env/.env.dev
+   echo "BASEURL=http://example.com" > helper/env/.env.test
+   echo "ENV=test" >> helper/env/.env.test
 ```
