@@ -10,7 +10,7 @@ import fs = require("fs-extra");
 let browser: Browser;
 let context: BrowserContext;
 
-// setDefaultTimeout(30 * 1000);
+setDefaultTimeout(30 * 1000);
 
 BeforeAll(async function() {
   getEnv();

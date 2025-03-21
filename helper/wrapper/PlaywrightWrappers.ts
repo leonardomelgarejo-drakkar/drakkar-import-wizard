@@ -19,7 +19,15 @@ export default class PlaywrightWrapper {
     }
 
     async waitAndClickGetByText(text: string) {
-        const element = this.page.getByText(text);
+        const element = this.page.getByText(text.trim(), { exact: false }).first();
+        await element.waitFor({
+            state: "visible"
+        });
+        await element.click();
+    }
+
+    async waitAndClickLocator(text: string) {
+        const element = this.page.locator(text);
         await element.waitFor({
             state: "visible"
         });

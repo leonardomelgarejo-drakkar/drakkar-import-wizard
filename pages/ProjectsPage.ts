@@ -20,6 +20,7 @@ export default class ProjectsPage {
     gridNameRoleName: "Name",
     gridDescriptionRoleName: "Description",
     gridCreatedOnRoleName: "Created On",
+    setANewProjectText: "Set a new project"
   }
 
   async gotoLuegRep(BASEURL: string){
@@ -52,6 +53,14 @@ export default class ProjectsPage {
 
   async getGridCreatedOnText(){
     return await this.base.getTextByRole(this.Elements.gridCell, this.Elements.gridCreatedOnRoleName);
+  }
+
+  async clickSetANewProject(){
+    await this.base.waitAndClickGetByText(this.Elements.setANewProjectText);
+  }
+
+  async pause(){
+    await this.base.pause();
   }
 
 }

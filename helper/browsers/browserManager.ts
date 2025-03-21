@@ -1,7 +1,7 @@
 import { chromium, firefox, LaunchOptions, webkit } from "playwright-core";
 
 const options: LaunchOptions = {
-  headless: true
+  headless: false
 }
 
 export const invokeBrowser = () => {
